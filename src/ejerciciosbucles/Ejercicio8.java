@@ -7,26 +7,30 @@ public class Ejercicio8 {
 	public static void main(String[] args) {
 
 		Scanner teclado = new Scanner(System.in);
-		boolean error = false;
 
-		int num = 0;
-		int numAnt = 0;
-		int contador = 0;
-		int fallos = 0;
+		int num, numAnt;
+		int contFallos = 0;
+		int contTotal = 0;
 
-		do {
+		System.out.println("Introduce un número inicial: ");
+		num = teclado.nextInt();
+		numAnt = num;
+		
+		while (num != 0) {
 			if (num < numAnt) {
-
-				contador++;
+				contFallos ++;
+				contTotal ++;
+				System.out.println("Fallo, es menor");
 			}
-			try {
-				System.out.println("Dime un número: ");
-				numAnt = teclado.nextInt();
-				error = false;
-			} catch (Exception e) {
+			numAnt = num;
+			contTotal ++;
 
-			}
-		} while (num > numAnt);
+			System.out.println("Introduce otro número: ");
+			num = teclado.nextInt();
+			
+		}
+		
+		System.out.println("Total de números introducidos: " + contTotal);
+		System.out.println("Total de números fallados: " + contFallos);
 	}
-
 }
