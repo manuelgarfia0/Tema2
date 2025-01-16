@@ -11,9 +11,9 @@ public class Ejercicio1 {
 		System.out.print("Introduce el tamaño del lado del cuadrado: ");
 		int lado = teclado.nextInt();
 
-		for (int i = 0; i < lado; i++) {
-			for (int j = 0; j < lado; j++) {
-				if (i == 0 || i == lado - 1 || j == 0 || j == lado - 1) {
+		for (int i = 0; i <= lado; i++) {
+			for (int j = 0; j <= lado; j++) {
+				if (i == 0 || i == lado || j == 0 || j == lado) {
 					System.out.print("* ");
 				} else {
 					System.out.print("  ");
